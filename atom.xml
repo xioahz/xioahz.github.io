@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Xioahz</title>
-  <icon>https://xioahz.gitee.io/xioahz.gitee.io/icon.png</icon>
+  <icon>https://xioahz.gitee.io/icon.png</icon>
   
-  <link href="https://xioahz.gitee.io/xioahz.gitee.io/atom.xml" rel="self"/>
+  <link href="https://xioahz.gitee.io/atom.xml" rel="self"/>
   
-  <link href="https://xioahz.gitee.io/xioahz.gitee.io/"/>
+  <link href="https://xioahz.gitee.io/"/>
   <updated>2022-03-30T07:06:37.350Z</updated>
-  <id>https://xioahz.gitee.io/xioahz.gitee.io/</id>
+  <id>https://xioahz.gitee.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://xioahz.gitee.io/xioahz.gitee.io/2022/03/15/hello-world/"/>
-    <id>https://xioahz.gitee.io/xioahz.gitee.io/2022/03/15/hello-world/</id>
+    <link href="https://xioahz.gitee.io/2022/03/15/hello-world/"/>
+    <id>https://xioahz.gitee.io/2022/03/15/hello-world/</id>
     <published>2022-03-15T02:15:22.374Z</published>
     <updated>2022-03-30T07:06:37.350Z</updated>
     
