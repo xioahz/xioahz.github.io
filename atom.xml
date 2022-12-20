@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Xioahz</title>
-  <icon>http://example.com/icon.png</icon>
+  <icon>https://xioahz.club/icon.png</icon>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://xioahz.club/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://xioahz.club/"/>
   <updated>2022-12-19T09:29:41.649Z</updated>
-  <id>http://example.com/</id>
+  <id>https://xioahz.club/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>xizhao</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Test</title>
-    <link href="http://example.com/2022/12/19/Test/"/>
-    <id>http://example.com/2022/12/19/Test/</id>
+    <link href="https://xioahz.club/2022/12/19/Test/"/>
+    <id>https://xioahz.club/2022/12/19/Test/</id>
     <published>2022-12-19T09:22:00.000Z</published>
     <updated>2022-12-19T09:29:41.649Z</updated>
     
@@ -35,17 +35,17 @@
     
     
     
-    <category term="测试" scheme="http://example.com/categories/%E6%B5%8B%E8%AF%95/"/>
+    <category term="测试" scheme="https://xioahz.club/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
-    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://xioahz.club/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>xizhao</title>
-    <link href="http://example.com/2022/12/19/xizhao/"/>
-    <id>http://example.com/2022/12/19/xizhao/</id>
+    <link href="https://xioahz.club/2022/12/19/xizhao/"/>
+    <id>https://xioahz.club/2022/12/19/xizhao/</id>
     <published>2022-12-19T08:18:00.000Z</published>
     <updated>2022-12-19T13:32:28.398Z</updated>
     
@@ -66,8 +66,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/03/15/hello-world/"/>
-    <id>http://example.com/2022/03/15/hello-world/</id>
+    <link href="https://xioahz.club/2022/03/15/hello-world/"/>
+    <id>https://xioahz.club/2022/03/15/hello-world/</id>
     <published>2022-03-15T02:15:00.000Z</published>
     <updated>2022-12-19T13:32:45.980Z</updated>
     
