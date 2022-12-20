@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>xizhao</title>
-    <url>/2022/12/19/xizhao/</url>
-    <content><![CDATA[<p>你好</p>
+    <title>Test</title>
+    <url>/2022/12/19/Test/</url>
+    <content><![CDATA[<p>test</p>
 ]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -25,15 +31,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Test</title>
-    <url>/2022/12/19/Test/</url>
-    <content><![CDATA[<p>test</p>
+    <title>xizhao</title>
+    <url>/2022/12/19/xizhao/</url>
+    <content><![CDATA[<p>你好</p>
 ]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
   </entry>
 </search>
