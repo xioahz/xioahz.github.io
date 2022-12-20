@@ -17,12 +17,12 @@ body.loading:before {display:block;}
 body.loading #container,body.loading #single,body.loading .nav {opacity:0;}
 html.loading,body.loading {height:100%;overflow:hidden;}
 a,a:hover {text-decoration:none;}
-img {display:block;max-width:100%;height:auto;}
+img {max-width:100%;height:auto;}
 audio {display:none;visibility:hidden;opacity:0;width:0;height:0;}
 #screen {position:relative;}
 #mark {width:100%;height:560px;overflow:hidden;}
 .layer {position:relative;}
-#cover {position:absolute;max-width:none;}
+
 #header {position:absolute;top:70px;width:100%;}
 #header > div {margin:0 60px;position:relative;}
 .icon-menu {font-size:20px;padding:6px 6px 5px;border-radius:2px;cursor:pointer;position:absolute;z-index:4;right:0;top:0;margin-top:-3px;background:rgba(255,255,255,.9);}
@@ -283,11 +283,12 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
   #header > div {width:900px;margin:0 auto;}
   #post0 {width:32%;}
   #post0 h2 {font-size:24px;}
+  #img {max-width:100%;height:auto;}
   .post {width:900px;}
   .post > a {width:480px;height:310px;}
-  .else {top:10px;width:420px;height:290px;}
-  .post:nth-child(odd) .else {left:450px;}
-  .post:nth-child(even) .else {right:450px;}
+  .else {top:-20px;width:210px;height:290px;}
+  .post:nth-child(odd) .else {left:50%;}
+  .post:nth-child(even) .else {right:auto;}
   .else p:first-child {font-size:12px;margin:50px 0 0 60px;}
   .else h3 {font-size:24px;margin:10px 60px 0 60px;}
   .else h3 + p {margin:10px 60px 0 60px;}
@@ -299,14 +300,15 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
 }
 @media screen and (max-width:900px) {
   #mark {height:480px;}
+  
   #header > div {width:90%;}
   #vibrant polygon {transform:translateX(-10%);-moz-transform:translateX(-10%);-webkit-transform:translateX(-10%);}
   #post0 {width:40%;}
   #post0 h2 {font-size:20px;}
   .post {width:100%;margin-top:60px;background:#fff;padding-bottom:30px;border-bottom:1px solid #eaeaea;}
   .post > a {display:block;margin:0 auto;width:100%;height:auto;}
-  .post > a img {margin:0 auto;}
-  .else {height:auto;position:static;width:100%;margin:0 auto;background:transparent;border:none;}
+  .post > a img {max-width:50%;height:auto;margin:0 auto;}
+  .else {height:auto;margin:0 auto;background:transparent;border:none;}
   .else p:first-child {margin:30px 0 0 20px;}
   .else h3 {font-size:24px;margin:10px 30px 0 20px;}
   .else h3 + p {margin:10px 30px 0 20px;}
@@ -343,6 +345,7 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
   #post0 h2 + p {text-align:left;margin:10px 20px 0 0;color:#f2f2f2;font-size:14px;}
   #post0 h2 a {color:#fff;}
   #post0 .summary {display:none;}
+  .post > a img {max-width:50%;height:150px;margin:0 auto;}
   .stuff span {margin-right:10px;}
   .stuff span:first-child {display:none;}
   .content table {font-size:smaller;}
