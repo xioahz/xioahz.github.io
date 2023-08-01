@@ -6,10 +6,13 @@
     <content><![CDATA[<p>test</p>
 ]]></content>
       <categories>
-        <category>测试</category>
+        <category>工作</category>
+        <category>生活</category>
+        <category>学习</category>
       </categories>
       <tags>
         <tag>学习</tag>
+        <tag>非标准化自动测试</tag>
       </tags>
   </entry>
   <entry>
