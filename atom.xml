@@ -6,7 +6,7 @@
   <link href="https://xioahz.club/atom.xml" rel="self"/>
   
   <link href="https://xioahz.club/"/>
-  <updated>2023-08-01T12:55:39.429Z</updated>
+  <updated>2023-08-03T06:23:20.036Z</updated>
   <id>https://xioahz.club/</id>
   
   <author>
@@ -17,76 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Test</title>
-    <link href="https://xioahz.club/2022/12/19/Test/"/>
-    <id>https://xioahz.club/2022/12/19/Test/</id>
-    <published>2022-12-19T09:22:00.000Z</published>
-    <updated>2023-08-01T12:55:39.429Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;test&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="工作" scheme="https://xioahz.club/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    <category term="生活" scheme="https://xioahz.club/categories/%E5%B7%A5%E4%BD%9C/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="学习" scheme="https://xioahz.club/categories/%E5%B7%A5%E4%BD%9C/%E7%94%9F%E6%B4%BB/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="学习" scheme="https://xioahz.club/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="非标准化自动测试" scheme="https://xioahz.club/tags/%E9%9D%9E%E6%A0%87%E5%87%86%E5%8C%96%E8%87%AA%E5%8A%A8%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>xizhao</title>
     <link href="https://xioahz.club/2022/12/19/xizhao/"/>
     <id>https://xioahz.club/2022/12/19/xizhao/</id>
     <published>2022-12-19T08:18:00.000Z</published>
-    <updated>2022-12-19T13:32:28.398Z</updated>
+    <updated>2023-08-03T06:23:20.036Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;你好&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;你好，欢迎来到-xizhao’s-blog。&quot;&gt;&lt;a href=&quot;#你好，欢迎来到-xizhao’s-blog。&quot; class=&quot;headerlink&quot; title=&quot;你好，欢迎来到 xizhao’s blog。&quot;&gt;&lt;/a&gt;你好，欢迎来到 xizhao’s</summary>
         
       
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://xioahz.club/2022/03/15/hello-world/"/>
-    <id>https://xioahz.club/2022/03/15/hello-world/</id>
-    <published>2022-03-15T02:15:00.000Z</published>
-    <updated>2022-12-19T13:32:45.980Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
+    <category term="公告" scheme="https://xioahz.club/categories/%E5%85%AC%E5%91%8A/"/>
     
     
   </entry>
