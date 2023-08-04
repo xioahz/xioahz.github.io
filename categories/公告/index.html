@@ -376,7 +376,8 @@
 </script>
 <script>
     
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
+      // 每天切换 banner 图.  Switch banner image every day.
+      var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
     
     $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
@@ -400,10 +401,10 @@
                 
                 
                 
-                <a href="/categories/%E6%97%A5%E8%AE%B0/" title="日记: 1">
+                <a href="/categories/Markdown/" title="Markdown: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">日记
+                            style="background-color: #F9EBEA;">Markdown
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -413,6 +414,15 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #F5EEF8;">公告
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E6%97%A5%E8%AE%B0/" title="日记: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">日记
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -435,7 +445,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="xizhao">
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="xizhao">
                             
                             <span class="card-title">xizhao</span>
                         </div>
@@ -552,6 +562,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">5.1k</span>
             
             
             
