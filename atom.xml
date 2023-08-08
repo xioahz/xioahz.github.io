@@ -6,7 +6,7 @@
   <link href="https://xioahz.club/atom.xml" rel="self"/>
   
   <link href="https://xioahz.club/"/>
-  <updated>2023-08-03T09:27:42.465Z</updated>
+  <updated>2023-08-08T12:32:27.452Z</updated>
   <id>https://xioahz.club/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>xizhao</title>
+    <title>非标准自动化测试工作日记----Day2</title>
+    <link href="https://xioahz.club/2023/08/08/day2/"/>
+    <id>https://xioahz.club/2023/08/08/day2/</id>
+    <published>2023-08-08T09:25:00.000Z</published>
+    <updated>2023-08-08T12:32:27.452Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;h1 id=&quot;CreateObject-“ADODB-RecordSet”&quot;&gt;&lt;a href=&quot;#CreateObject-“ADODB-RecordSet”&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试" scheme="https://xioahz.club/tags/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非标准自动化测试工作日记----Day1</title>
+    <link href="https://xioahz.club/2023/08/07/day1/"/>
+    <id>https://xioahz.club/2023/08/07/day1/</id>
+    <published>2023-08-07T08:22:00.000Z</published>
+    <updated>2023-08-08T12:32:35.281Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;-Day1&lt;br&gt;author: xizhao&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;h2 id=&quot;错误处理&quot;&gt;&lt;a href=&quot;#错误处理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试" scheme="https://xioahz.club/tags/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="https://xioahz.club/2023/08/03/xizhao/"/>
     <id>https://xioahz.club/2023/08/03/xizhao/</id>
     <published>2023-08-03T09:25:00.000Z</published>
-    <updated>2023-08-03T09:27:42.465Z</updated>
+    <updated>2023-08-08T12:46:42.201Z</updated>
     
     
       
@@ -42,43 +99,18 @@
   </entry>
   
   <entry>
-    <title>非标准自动化测试工作日记----Day1</title>
-    <link href="https://xioahz.club/2023/08/03/fei-biao-zhun-zi-dong-hua-ce-shi-gong-zuo-ri-ji-day1/"/>
-    <id>https://xioahz.club/2023/08/03/fei-biao-zhun-zi-dong-hua-ce-shi-gong-zuo-ri-ji-day1/</id>
-    <published>2023-08-03T08:21:00.000Z</published>
-    <updated>2023-08-03T08:50:27.929Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;-Day1&lt;br&gt;author:</summary>
-        
-      
-    
-    
-    
-    <category term="日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>typora-vue-theme主题介绍</title>
     <link href="https://xioahz.club/2023/08/03/test/"/>
     <id>https://xioahz.club/2023/08/03/test/</id>
     <published>2023-08-03T01:25:00.000Z</published>
-    <updated>2023-08-04T06:42:58.080Z</updated>
+    <updated>2023-08-08T12:46:25.256Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;hexo-theme-matery&quot;&gt;&lt;a href=&quot;#hexo-theme-matery&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-matery&quot;&gt;&lt;/a&gt;hexo-theme-matery&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;hexo-theme-matery&quot;&gt;&lt;a href=&quot;#hexo-theme-matery&quot; class=&quot;headerlink&quot;</summary>
         
       
     
