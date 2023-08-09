@@ -6,7 +6,7 @@
   <link href="https://xioahz.club/atom.xml" rel="self"/>
   
   <link href="https://xioahz.club/"/>
-  <updated>2023-08-08T12:32:27.452Z</updated>
+  <updated>2023-08-09T09:04:52.847Z</updated>
   <id>https://xioahz.club/</id>
   
   <author>
@@ -17,25 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>非标准自动化测试工作日记----Day2</title>
-    <link href="https://xioahz.club/2023/08/08/day2/"/>
-    <id>https://xioahz.club/2023/08/08/day2/</id>
-    <published>2023-08-08T09:25:00.000Z</published>
-    <updated>2023-08-08T12:32:27.452Z</updated>
+    <title>非标准自动化测试工作日记----Day 3</title>
+    <link href="https://xioahz.club/2023/08/09/day3/"/>
+    <id>https://xioahz.club/2023/08/09/day3/</id>
+    <published>2023-08-09T09:25:00.000Z</published>
+    <updated>2023-08-09T09:04:52.847Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;h1 id=&quot;CreateObject-“ADODB-RecordSet”&quot;&gt;&lt;a href=&quot;#CreateObject-“ADODB-RecordSet”&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;u&gt;&lt;strong&gt;-Day 3&lt;/strong&gt;&lt;/u&gt;&lt;br&gt;&lt;u&gt;&lt;strong&gt;author:  xizhao&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;h1 id=&quot;TextMatrix&quot;&gt;&lt;a href=&quot;#TextMatrix&quot;</summary>
         
       
     
     
     
-    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
     
     
     <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>
@@ -45,18 +47,48 @@
   </entry>
   
   <entry>
-    <title>非标准自动化测试工作日记----Day1</title>
+    <title>非标准自动化测试工作日记----Day 2</title>
+    <link href="https://xioahz.club/2023/08/08/day2/"/>
+    <id>https://xioahz.club/2023/08/08/day2/</id>
+    <published>2023-08-08T09:25:00.000Z</published>
+    <updated>2023-08-09T09:04:30.081Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;&lt;strong&gt;-Day 2&lt;/strong&gt;&lt;/u&gt;&lt;br&gt;&lt;u&gt;&lt;strong&gt;author:  xizhao&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;h1 id=&quot;CreateObject-“ADODB-RecordSet”&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试" scheme="https://xioahz.club/tags/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非标准自动化测试工作日记----Day 1</title>
     <link href="https://xioahz.club/2023/08/07/day1/"/>
     <id>https://xioahz.club/2023/08/07/day1/</id>
     <published>2023-08-07T08:22:00.000Z</published>
-    <updated>2023-08-08T12:32:35.281Z</updated>
+    <updated>2023-08-09T09:05:00.617Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;-Day1&lt;br&gt;author: xizhao&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;u&gt;&lt;strong&gt;-Day 1&lt;/strong&gt;&lt;/u&gt;&lt;br&gt;&lt;u&gt;&lt;strong&gt;author:  xizhao&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;h2 id=&quot;错误处理&quot;&gt;&lt;a href=&quot;#错误处理&quot; class=&quot;headerlink&quot;</summary>
         
@@ -64,7 +96,9 @@
     
     
     
-    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
     
     
     <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>

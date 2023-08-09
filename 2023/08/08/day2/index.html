@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="非标准自动化测试工作日记----Day2, Xioahz">
-    <meta name="description" content="非标准自动化测试工作日记----Day2">
+    <meta name="keywords" content="非标准自动化测试工作日记----Day 2, Xioahz">
+    <meta name="description" content="非标准自动化测试工作日记----Day 2">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>非标准自动化测试工作日记----Day2 | Xioahz</title>
+    <title>非标准自动化测试工作日记----Day 2 | Xioahz</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -38,7 +38,9 @@
 
 
 
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
+
 
 
 
@@ -351,7 +353,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">非标准自动化测试工作日记----Day2</h1>
+                    <h1 class="description center-align post-title">非标准自动化测试工作日记----Day 2</h1>
                 </div>
             </div>
         </div>
@@ -361,10 +363,12 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -389,7 +393,11 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/" class="post-category">
+                            <a href="/categories/%E6%97%A5%E8%AE%B0/" class="post-category">
+                                日记
+                            </a>
+                        
+                            <a href="/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/" class="post-category">
                                 非标准自动化测试日记
                             </a>
                         
@@ -409,7 +417,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2023-08-08
+                    2023-08-09
                 </div>
                 
 
@@ -448,9 +456,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<h1 id="CreateObject-“ADODB-RecordSet”"><a href="#CreateObject-“ADODB-RecordSet”" class="headerlink" title="CreateObject(“ADODB.RecordSet”)"></a>CreateObject(“ADODB.RecordSet”)</h1></blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">Set Rs = CreateObject("ADODB.RecordSet")
+                <p><u><strong>-Day 2</strong></u><br><u><strong>author:  xizhao</strong></u></p>
+<h1 id="CreateObject-“ADODB-RecordSet”"><a href="#CreateObject-“ADODB-RecordSet”" class="headerlink" title="CreateObject(“ADODB.RecordSet”)"></a>CreateObject(“ADODB.RecordSet”)</h1><pre class=" language-vbscript"><code class="language-vbscript">Set Rs = CreateObject("ADODB.RecordSet")
 
 Set Rs = CreateObject("ADODB.RecordSet") 是vbs代码中用于创建一个ADODB.RecordSet对象的语句。下面是对该行代码的解释：
 
@@ -459,13 +466,9 @@ Rs 是变量名，可以根据需要自定义，用于引用创建的ADODB.Recor
 CreateObject("ADODB.RecordSet") 是用于创建ADODB.RecordSet对象的语句。CreateObject 函数用于根据给定的 ProgID（程序标识符）创建指定类型的对象。在这里，它使用 “ADODB.RecordSet” 作为 ProgID 来创建 ADODB.RecordSet 对象。
 创建 RecordSet 对象后，可以使用该对象来执行数据库操作，如执行查询语句、读取数据等。例如，可以使用 Rs.Open 方法打开记录集、使用 Rs.MoveFirst 方法移动到记录集的第一条记录等。
 </code></pre>
-<blockquote>
-<h1 id="CreateObject-“ADODB-Connection”"><a href="#CreateObject-“ADODB-Connection”" class="headerlink" title="CreateObject(“ADODB.Connection”)"></a>CreateObject(“ADODB.Connection”)</h1></blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">ADODB.Connection 对象用于建立与数据库的连接并执行数据库操作，如执行 SQL 查询、插入、更新、删除等操作。
+<h1 id="CreateObject-“ADODB-Connection”"><a href="#CreateObject-“ADODB-Connection”" class="headerlink" title="CreateObject(“ADODB.Connection”)"></a>CreateObject(“ADODB.Connection”)</h1><pre class=" language-vbscript"><code class="language-vbscript">ADODB.Connection 对象用于建立与数据库的连接并执行数据库操作，如执行 SQL 查询、插入、更新、删除等操作。
 </code></pre>
-<blockquote>
-<h1 id="Rs-Open-SQLStr-Conn-1-1"><a href="#Rs-Open-SQLStr-Conn-1-1" class="headerlink" title="Rs.Open SQLStr,Conn,1,1"></a>Rs.Open SQLStr,Conn,1,1</h1></blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">对于 vbs 代码中的 Rs.Open SQLStr,Conn,1,1，这行代码是用于执行查询语句并打开记录集（RecordSet）。下面是对该行代码的解释：
+<h1 id="Rs-Open-SQLStr-Conn-1-1"><a href="#Rs-Open-SQLStr-Conn-1-1" class="headerlink" title="Rs.Open SQLStr,Conn,1,1"></a>Rs.Open SQLStr,Conn,1,1</h1><pre class=" language-vbscript"><code class="language-vbscript">对于 vbs 代码中的 Rs.Open SQLStr,Conn,1,1，这行代码是用于执行查询语句并打开记录集（RecordSet）。下面是对该行代码的解释：
 
 Rs 是一个 RecordSet 对象，它用于存储从数据库中检索的数据。
 Open 是 RecordSet 对象的一个方法，用于打开一个记录集。
@@ -485,13 +488,9 @@ Conn 是一个 Connection 对象，表示与数据库的连接。
 <blockquote>
 <p>Rs.Eof 是 Recordset 对象的属性，用于判断结果集是否为空。</p>
 </blockquote>
-<blockquote>
-<h1 id="If-Not-Rs-Eof-And-Err-Number-x3D-0-Then"><a href="#If-Not-Rs-Eof-And-Err-Number-x3D-0-Then" class="headerlink" title="If Not Rs.Eof And Err.Number &#x3D; 0 Then"></a>If Not Rs.Eof And Err.Number &#x3D; 0 Then</h1></blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">这段代码用于检查结果集是否非空，并且是否没有产生错误。Rs.Eof 是 Recordset 对象的属性，用于判断结果集是否为空。Err.Number 用于检查是否有错误发生，0 表示没有错误。
+<h1 id="If-Not-Rs-Eof-And-Err-Number-x3D-0-Then"><a href="#If-Not-Rs-Eof-And-Err-Number-x3D-0-Then" class="headerlink" title="If Not Rs.Eof And Err.Number &#x3D; 0 Then"></a>If Not Rs.Eof And Err.Number &#x3D; 0 Then</h1><pre class=" language-vbscript"><code class="language-vbscript">这段代码用于检查结果集是否非空，并且是否没有产生错误。Rs.Eof 是 Recordset 对象的属性，用于判断结果集是否为空。Err.Number 用于检查是否有错误发生，0 表示没有错误。
 </code></pre>
-<blockquote>
-<h1 id="获取数据库连接"><a href="#获取数据库连接" class="headerlink" title="获取数据库连接"></a>获取数据库连接</h1></blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">Set Conn = GetADOConn() 和 Conn.Open 是一对vbs代码，用于获取连接对象并打开数据库连接。下面是对这两行代码的解释：
+<h1 id="获取数据库连接"><a href="#获取数据库连接" class="headerlink" title="获取数据库连接"></a>获取数据库连接</h1><pre class=" language-vbscript"><code class="language-vbscript">Set Conn = GetADOConn() 和 Conn.Open 是一对vbs代码，用于获取连接对象并打开数据库连接。下面是对这两行代码的解释：
 
 Set Conn = GetADOConn()
 
@@ -504,9 +503,7 @@ Conn 是先前代码中分配的 ADO Connection 对象的变量名。
 Open 是 Connection 对象的一个方法，用于打开与数据库的连接。
 通过以上代码，首先利用自定义的 GetADOConn() 函数获取到一个 ADO Connection 对象，并将其赋值给变量 Conn。然后使用 Conn.Open 方法打开数据库连接，使之处于可用状态。
 </code></pre>
-<blockquote>
-<h1 id="vbs连接数据库代码解析"><a href="#vbs连接数据库代码解析" class="headerlink" title="vbs连接数据库代码解析"></a>vbs连接数据库代码解析</h1></blockquote>
-<blockquote>
+<h1 id="vbs连接数据库代码解析"><a href="#vbs连接数据库代码解析" class="headerlink" title="vbs连接数据库代码解析"></a>vbs连接数据库代码解析</h1><blockquote>
 <p>源代码</p>
 </blockquote>
 <pre class=" language-vbscript"><code class="language-vbscript">Dim sPro,sSer,sCon,sDsn,DSNName
@@ -553,9 +550,7 @@ If Err.Number <> 0 Then
 
 请注意，以上代码是一个示例，并假设有一个名为 GetADOConn 的自定义函数来获取连接对象。实际上，你可以根据自己的需求和数据库配置进行相应的修改和调整。
 </code></pre>
-<blockquote>
-<h1 id="释放资源，关闭数据库"><a href="#释放资源，关闭数据库" class="headerlink" title="释放资源，关闭数据库"></a>释放资源，关闭数据库</h1></blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">该段代码用于关闭数据库连接和释放相关资源，下面是对代码的解释：
+<h1 id="释放资源，关闭数据库"><a href="#释放资源，关闭数据库" class="headerlink" title="释放资源，关闭数据库"></a>释放资源，关闭数据库</h1><pre class=" language-vbscript"><code class="language-vbscript">该段代码用于关闭数据库连接和释放相关资源，下面是对代码的解释：
 
 Rs.Close
 Set Rs = Nothing
@@ -569,9 +564,7 @@ Conn.Close 用于关闭数据库连接。Conn 是一个 ADO 连接对象，.Clos
 
 Set Conn = Nothing 将连接对象 Conn 设置为 Nothing，以释放连接对象所占用的内存资源。
 </code></pre>
-<blockquote>
-<h1 id="提供错误处理"><a href="#提供错误处理" class="headerlink" title="提供错误处理"></a>提供错误处理</h1></blockquote>
-<blockquote>
+<h1 id="提供错误处理"><a href="#提供错误处理" class="headerlink" title="提供错误处理"></a>提供错误处理</h1><blockquote>
 <p>代码</p>
 </blockquote>
 <pre class=" language-vbscript"><code class="language-vbscript">If Err.Number <> 0 Then
@@ -744,34 +737,37 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/08/08/day2/">
+                <a href="/2023/08/09/day3/">
                     <div class="card-image">
                         
-                        <img src="/images/2.jpg" class="responsive-img" alt="非标准自动化测试工作日记----Day2">
+                        <img src="/images/3.jpg" class="responsive-img" alt="非标准自动化测试工作日记----Day 3">
                         
-                        <span class="card-title">非标准自动化测试工作日记----Day2</span>
+                        <span class="card-title">非标准自动化测试工作日记----Day 3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            非标准自动化测试工作日记----Day2
+                            非标准自动化测试工作日记----Day 3
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/" class="post-category">
+                            <a href="/categories/%E6%97%A5%E8%AE%B0/" class="post-category">
+                                    日记
+                                </a>
+                            
+                            <a href="/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/" class="post-category">
                                     非标准自动化测试日记
                                 </a>
                             
@@ -779,7 +775,6 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -806,9 +801,9 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="非标准自动化测试工作日记----Day1">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="非标准自动化测试工作日记----Day 1">
                         
-                        <span class="card-title">非标准自动化测试工作日记----Day1</span>
+                        <span class="card-title">非标准自动化测试工作日记----Day 1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -825,7 +820,11 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/" class="post-category">
+                            <a href="/categories/%E6%97%A5%E8%AE%B0/" class="post-category">
+                                    日记
+                                </a>
+                            
+                            <a href="/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/" class="post-category">
                                     非标准自动化测试日记
                                 </a>
                             
@@ -876,6 +875,87 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
@@ -955,7 +1035,7 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">8.6k</span>
+                        class="white-color">9.9k</span>
             
             
             
