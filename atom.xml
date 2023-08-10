@@ -6,7 +6,7 @@
   <link href="https://xioahz.club/atom.xml" rel="self"/>
   
   <link href="https://xioahz.club/"/>
-  <updated>2023-08-09T09:04:52.847Z</updated>
+  <updated>2023-08-10T08:23:21.279Z</updated>
   <id>https://xioahz.club/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>非标准自动化测试工作日记----Day 4</title>
+    <link href="https://xioahz.club/2023/08/10/day4/"/>
+    <id>https://xioahz.club/2023/08/10/day4/</id>
+    <published>2023-08-10T08:25:00.000Z</published>
+    <updated>2023-08-10T08:23:21.279Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;&lt;strong&gt;-Day 4&lt;/strong&gt;&lt;/u&gt;&lt;br&gt;&lt;u&gt;&lt;strong&gt;author:  xizhao&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;h2 id=&quot;VBScript：Set关键字&quot;&gt;&lt;a href=&quot;#VBScript：Set关键字&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试日记" scheme="https://xioahz.club/categories/%E6%97%A5%E8%AE%B0/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://xioahz.club/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="非标准自动化测试" scheme="https://xioahz.club/tags/%E9%9D%9E%E6%A0%87%E5%87%86%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>非标准自动化测试工作日记----Day 3</title>
