@@ -23,6 +23,7 @@
 .toc-widget {
     width: 345px;
     padding-left: 20px;
+	line-height: 2rem;
 }
 
 .toc-widget .toc-title {
@@ -30,6 +31,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.5rem;
+	
 }
 
 .toc-widget ol {

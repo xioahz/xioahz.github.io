@@ -157,212 +157,6 @@
       </tags>
   </entry>
   <entry>
-    <title>非标准自动化测试工作日记----Day 4</title>
-    <url>/2023/08/10/day4/</url>
-    <content><![CDATA[<p><u><strong>-Day 4</strong></u><br><u><strong>author:  xizhao</strong></u></p>
-<h2 id="VBScript：Set关键字"><a href="#VBScript：Set关键字" class="headerlink" title="VBScript：Set关键字"></a>VBScript：Set关键字</h2><blockquote>
-<p>在 VBScript 中，如果你希望在函数中返回一个对象引用或一个对象变量，你需要使用 <code>Set</code> 关键字。</p>
-<p>如果你想返回的是一个原始类型的值（例如字符串、数值、布尔值等），则不需要使用 <code>Set</code> 关键字。</p>
-<p>以下是一些示例，说明何时需要使用 <code>Set</code> 关键字：</p>
-</blockquote>
-<blockquote>
-<ol>
-<li>返回一个对象引用：</li>
-</ol>
-</blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">Function GetObjectReference()
-    Dim obj
-    Set obj = CreateObject("SomeObject")
-    Set GetObjectReference = obj  ' 返回一个对象引用时需要使用 Set
-End Function
-</code></pre>
-<blockquote>
-<ol start="2">
-<li>返回原始类型的值：</li>
-</ol>
-</blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">Function GetPrimitiveValue()
-    GetPrimitiveValue = "Hello, World!"  ' 返回一个字符串字面量，不需要使用 Set
-End Function
-</code></pre>
-<blockquote>
-<p>在函数中使用 <code>Set</code> 关键字可以确保对象引用被正确地分配和返回。</p>
-<blockquote>
-<p>需要注意的是，在 VBScript 中，函数可以返回对象引用或原始类型的值，但不支持返回数组。如果要返回多个值，可以使用 <code>ByRef</code> 参数来传递引用，或者将多个值封装到一个对象中进行返回。</p>
-</blockquote>
-</blockquote>
-<h2 id="Set-GetADOConnData-x3D-conn-Set-Conn-x3D-GetADOConnData"><a href="#Set-GetADOConnData-x3D-conn-Set-Conn-x3D-GetADOConnData" class="headerlink" title="Set GetADOConnData &#x3D; conn        Set Conn&#x3D;GetADOConnData()"></a>Set GetADOConnData &#x3D; conn        Set Conn&#x3D;GetADOConnData()</h2><blockquote>
-<blockquote>
-<p>Set GetADOConnData &#x3D; conn  </p>
-</blockquote>
-<p>将连接对象<code>conn</code>返回给<code>函数调用者</code>，通过<code>Set GetADOConnData = conn</code>。就好像是，有返回值的函数。可以理解为JAVA中的有返回值的函数和无返回值的函数的区别。</p>
-<p>加了这段代码，在VBScript中就是有返回值的函数。</p>
-<blockquote>
-<p>Set Conn&#x3D;GetADOConnData()</p>
-</blockquote>
-<p>将 <code>GetADOConnData()</code> 函数返回的<code>对象</code>赋值给变量 <code>Conn</code>。</p>
-</blockquote>
-<h2 id="VBScript中的函数返回："><a href="#VBScript中的函数返回：" class="headerlink" title="VBScript中的函数返回："></a>VBScript中的函数返回：</h2><pre class=" language-vbscript"><code class="language-vbscript">function GetADOConnData（）
-
-。。。
-
-Set GetADOConnData = conn          `这里相当于，java中的return conn;
-
-。。。
-
-end function
-
-
-
-function GetValueFromDB（）
-
-。。。
-
-Set Conn=GetADOConnData()       `这里就是在调用GetADOConnData() 并将该函数的返回值，赋予Conn对象；
-
-。。。
-
-end function
-</code></pre>
-<h2 id="执行一次SQL语句，并返回受影响的行"><a href="#执行一次SQL语句，并返回受影响的行" class="headerlink" title="执行一次SQL语句，并返回受影响的行"></a>执行一次SQL语句，并返回受影响的行</h2><blockquote>
-<p>代码：</p>
-</blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">'执行一次SQL语句,并返回影响的行
-Function ReturnExecuteSQL(Byval SQL) 
-    On Error Resume Next 
-   
-    Dim Conn,RowCount
-    RowCount = -1
-    Set Conn = GetADOConn()
-    Conn.Open
-    Conn.Execute SQL,RowCount,&H0001
-    Conn.Close: Set Conn = Nothing
-    
-    If Err.Number <> 0 Then
-        Err.Claer
-    End If 
-    ReturnExecuteSQL = RowCount
-End Function
-</code></pre>
-<blockquote>
-<p>主要语句解析：</p>
-</blockquote>
-<blockquote>
-<p><code>Conn.Execute SQL, RowCount, &amp;H0001</code> 是用于执行 SQL 查询的语句。让我们详细解释一下每个参数的含义：</p>
-<ul>
-<li><code>Conn</code>：表示要执行查询的数据库连接对象。</li>
-<li><code>SQL</code>：包含要执行的 SQL 查询的字符串。</li>
-<li><code>RowCount</code>：用于返回执行查询后影响的行数。在该代码中，<code>RowCount</code> 是一个变量，将被传递给 <code>Execute</code> 方法以返回查询结果。</li>
-<li><code>&amp;H0001</code>：这是一个常量，用于指定游标类型。在代码中，<code>&amp;H0001</code> 对应键控游标（adOpenKeyset）。</li>
-</ul>
-<p>综上所述，该行代码的作用是使用给定的连接对象 <code>Conn</code> 执行 SQL 查询，并将执行结果中的影响行数存储到 <code>RowCount</code> 变量中。查询的结果不会被返回，只是用于获取影响行数。</p>
-<blockquote>
-<p>需要注意的是，常量值 <code>&amp;H0001</code> 指定了键控游标，这意味着查询的结果集是可滚动的，并且通过关键字段索引。如果你需要其他类型的游标，可以选择适合你需求的常量值。</p>
-</blockquote>
-<p><code>ReturnExecuteSQL = RowCount</code> 是将影响的行数作为函数的返回值。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>日记</category>
-        <category>非标准自动化测试日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-        <tag>非标准自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>非标准自动化测试工作日记----Day 3</title>
-    <url>/2023/08/09/day3/</url>
-    <content><![CDATA[<p><u><strong>-Day 3</strong></u><br><u><strong>author:  xizhao</strong></u></p>
-<h1 id="TextMatrix"><a href="#TextMatrix" class="headerlink" title="TextMatrix"></a>TextMatrix</h1><blockquote>
-<p>在 VBScript 中，<code>TextMatrix</code> 是一个用于访问和操作数据网格或表格的属性或方法。它通常用于获取或设置指定位置（行和列）的文本值。</p>
-<p>具体而言，<code>TextMatrix</code> 是一种用于访问数据网格对象（如 FlexGrid）中单元格文本的方法。通过使用 <code>TextMatrix(row, col)</code>，你可以获取或设置指定 <code>row</code> 行和 <code>col</code> 列位置的文本值。</p>
-<p>使用示例：</p>
-</blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">' 获取指定行和列位置的文本值
-Dim value
-value = DGList.TextMatrix(2, 3) ' 获取第 2 行，第 3 列的文本值
-
-' 设置指定行和列位置的文本值
-DGList.TextMatrix(5, 1) = "New Value" ' 设置第 5 行，第 1 列的文本值为 "New Value"
-</code></pre>
-<blockquote>
-<p>在上述示例中，我们使用 <code>DGList.TextMatrix(2, 3)</code> 获取数据网格对象 <code>DGList</code> 中第 2 行第 3 列的文本值，并将其赋给变量 <code>value</code>。同样，我们也可以使用 <code>DGList.TextMatrix(5, 1)</code> 将特定位置的文本值设为 “New Value”。</p>
-<blockquote>
-<p>需要注意的是，在具体的代码中，<code>DGList</code> 是一个表示数据网格或表格的对象，而 <code>TextMatrix</code> 则是它的属性或方法，具体取决于所使用的组件或控件以及其文档中的定义。</p>
-</blockquote>
-</blockquote>
-<h1 id="DGList-RowSel"><a href="#DGList-RowSel" class="headerlink" title="DGList.RowSel"></a>DGList.RowSel</h1><blockquote>
-<blockquote>
-<p><code>DGList.RowSel</code> 是一个表示数据网格控件（如 FlexGrid）当前所选行的属性。</p>
-</blockquote>
-<p>在该属性中，<code>DGList</code> 是表示数据网格控件的对象。<code>RowSel</code> 是该控件的属性，用于获取或设置当前所选行的索引值。</p>
-<p>通过读取 <code>DGList.RowSel</code> 的值，你可以获取当前选中行的索引值，进而在需要的地方使用或处理该值。</p>
-</blockquote>
-<h1 id="DGList-TextMatrix-DGList-RowSel-0"><a href="#DGList-TextMatrix-DGList-RowSel-0" class="headerlink" title="DGList.TextMatrix(DGList.RowSel ,0)"></a>DGList.TextMatrix(DGList.RowSel ,0)</h1><blockquote>
-<blockquote>
-<p><code>DGList.TextMatrix(DGList.RowSel, 0)</code> 是一个在 VBScript 中用于获取数据网格控件（如 FlexGrid）中所选行（<code>RowSel</code>）的第一列（0 列）文本值的表达式。</p>
-</blockquote>
-<p>在该表达式中，<code>DGList</code> 表示数据网格控件的对象，<code>RowSel</code> 是该控件的属性，表示当前所选行的索引值。而数字 0 则代表第一列的索引（在 VBScript 中，数组索引从 0 开始）。</p>
-<p>通过此表达式，可以获取到所选行的第一列的文本值，并将其用于后续操作。</p>
-</blockquote>
-<h1 id="MsgBox-“您确认要删除-”-PName-“-该零件信息吗？”-292-x3D-6"><a href="#MsgBox-“您确认要删除-”-PName-“-该零件信息吗？”-292-x3D-6" class="headerlink" title="MsgBox(“您确认要删除[” + PName + “]该零件信息吗？”,292) &#x3D; 6"></a>MsgBox(“您确认要删除[” + PName + “]该零件信息吗？”,292) &#x3D; 6</h1><blockquote>
-<blockquote>
-<p><code>MsgBox(&quot;您确认要删除[&quot; + PName + &quot;]该零件信息吗？&quot;, 292) = 6</code> 是一个用于显示带有确认按钮的消息框，并根据用户的选择返回一个值的代码。</p>
-</blockquote>
-<p>在该代码中，<code>MsgBox</code> 是用于显示消息框的函数，括号中的第一个参数是要显示的消息文本，第二个参数 292 表示消息框类型为具有确认和取消按钮的消息框。</p>
-<p>根据返回值进行处理，数字 6 表示用户点击了确认按钮。因此，代码的意思是，如果用户点击了确认按钮，返回值为 6，则执行相应的删除操作。</p>
-<p>同时，代码中还使用了字符串拼接，将变量 <code>PName</code> 的值嵌入到消息文本中。</p>
-</blockquote>
-<h1 id="DGList-ColAlignment-x3D-1"><a href="#DGList-ColAlignment-x3D-1" class="headerlink" title="DGList.ColAlignment &#x3D; 1"></a>DGList.ColAlignment &#x3D; 1</h1><blockquote>
-<blockquote>
-<p><code>DGList.ColAlignment = 1</code> 是一个用于设置数据网格控件（如 FlexGrid）中所有列的对齐方式的代码。</p>
-</blockquote>
-<p>在该代码中，<code>DGList</code> 表示数据网格控件的对象，<code>ColAlignment</code> 是该控件的属性，用于设置列的对齐方式。</p>
-<p>数字 1 代表对齐方式为居中对齐。根据代码的设定，执行该语句后，数据网格中的所有列的内容将居中对齐显示。</p>
-</blockquote>
-<h1 id="CInt-函数"><a href="#CInt-函数" class="headerlink" title="CInt  函数"></a>CInt  函数</h1><blockquote>
-<p><code>CInt</code> 是一个函数，用于将给定的表达式（expression）转换为整数类型（integer）。</p>
-<p><code>CInt(expression)</code> 中的 <code>expression</code> 可以是任何合法的表达式，包括数字、字符串或变量。该函数会尝试将 <code>expression</code> 转换为整数类型，并返回转换后的整数值。如果无法进行有效的转换，将引发错误。</p>
-<p>下面是一些示例使用 <code>CInt</code> 函数的情况：</p>
-</blockquote>
-<pre class=" language-vbscript"><code class="language-vbscript">Dim num As Integer
-num = CInt(10.5) ' 将浮点数 10.5 转换为整数 10
-
-Dim str As String
-str = "123"
-num = CInt(str) ' 将字符串 "123" 转换为整数 123
-
-Dim invalid As String
-invalid = "ABC"
-num = CInt(invalid) ' 无法将字符串 "ABC" 转换为整数，将引发错误
-</code></pre>
-<blockquote>
-<p>需要注意的是，在进行类型转换时，<code>CInt</code> 函数会对表达式进行取整操作，即舍去小数部分。</p>
-</blockquote>
-<h1 id="VBScript-符号"><a href="#VBScript-符号" class="headerlink" title="VBScript 符号"></a>VBScript 符号</h1><pre class=" language-vbscript"><code class="language-vbscript">vbCrlf 表示换行符和回车符的组合。
-Chr(10) 和 Chr(13) 是特殊字符，分别表示换行符和回车符。
-</code></pre>
-<h1 id="Wincc—VBScript-变量读写【异步-x2F-同步】"><a href="#Wincc—VBScript-变量读写【异步-x2F-同步】" class="headerlink" title="Wincc—VBScript 变量读写【异步&#x2F;同步】"></a>Wincc—VBScript 变量读写【异步&#x2F;同步】</h1><blockquote>
-<p>异步读: <code>read()</code></p>
-<blockquote>
-<p>理解：相当于有“缓存区” <code>【映像区】</code>  读取变量时，第一次读取数据先读取AS系统中的数据，后面映像区<code>周期性（触发周期/2）</code>的从AS系统请求数据。在次读取数据时，直接从“缓存区”中读取变量。</p>
-</blockquote>
-<p>同步读: <code>read(1)</code></p>
-<p>理解：直接从AS系统中读取数据。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>日记</category>
-        <category>非标准自动化测试日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-        <tag>非标准自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>非标准自动化测试工作日记----Day 2</title>
     <url>/2023/08/08/day2/</url>
     <content><![CDATA[<p><u><strong>-Day 2</strong></u><br><u><strong>author:  xizhao</strong></u></p>
@@ -509,15 +303,209 @@ MsgBox 是一个用于显示消息框的函数。Err.Description 是一个系统
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/08/03/xizhao/</url>
-    <content><![CDATA[<h1 id="你好，欢迎来到-xizhao’s-blog。"><a href="#你好，欢迎来到-xizhao’s-blog。" class="headerlink" title="你好，欢迎来到 xizhao’s blog。"></a>你好，欢迎来到 xizhao’s blog。</h1><p><img src="/images/2.jpg"></p>
+    <title>非标准自动化测试工作日记----Day 3</title>
+    <url>/2023/08/09/day3/</url>
+    <content><![CDATA[<p><u><strong>-Day 3</strong></u><br><u><strong>author:  xizhao</strong></u></p>
+<h1 id="TextMatrix"><a href="#TextMatrix" class="headerlink" title="TextMatrix"></a>TextMatrix</h1><blockquote>
+<p>在 VBScript 中，<code>TextMatrix</code> 是一个用于访问和操作数据网格或表格的属性或方法。它通常用于获取或设置指定位置（行和列）的文本值。</p>
+<p>具体而言，<code>TextMatrix</code> 是一种用于访问数据网格对象（如 FlexGrid）中单元格文本的方法。通过使用 <code>TextMatrix(row, col)</code>，你可以获取或设置指定 <code>row</code> 行和 <code>col</code> 列位置的文本值。</p>
+<p>使用示例：</p>
+</blockquote>
+<pre class=" language-vbscript"><code class="language-vbscript">' 获取指定行和列位置的文本值
+Dim value
+value = DGList.TextMatrix(2, 3) ' 获取第 2 行，第 3 列的文本值
+
+' 设置指定行和列位置的文本值
+DGList.TextMatrix(5, 1) = "New Value" ' 设置第 5 行，第 1 列的文本值为 "New Value"
+</code></pre>
+<blockquote>
+<p>在上述示例中，我们使用 <code>DGList.TextMatrix(2, 3)</code> 获取数据网格对象 <code>DGList</code> 中第 2 行第 3 列的文本值，并将其赋给变量 <code>value</code>。同样，我们也可以使用 <code>DGList.TextMatrix(5, 1)</code> 将特定位置的文本值设为 “New Value”。</p>
+<blockquote>
+<p>需要注意的是，在具体的代码中，<code>DGList</code> 是一个表示数据网格或表格的对象，而 <code>TextMatrix</code> 则是它的属性或方法，具体取决于所使用的组件或控件以及其文档中的定义。</p>
+</blockquote>
+</blockquote>
+<h1 id="DGList-RowSel"><a href="#DGList-RowSel" class="headerlink" title="DGList.RowSel"></a>DGList.RowSel</h1><blockquote>
+<blockquote>
+<p><code>DGList.RowSel</code> 是一个表示数据网格控件（如 FlexGrid）当前所选行的属性。</p>
+</blockquote>
+<p>在该属性中，<code>DGList</code> 是表示数据网格控件的对象。<code>RowSel</code> 是该控件的属性，用于获取或设置当前所选行的索引值。</p>
+<p>通过读取 <code>DGList.RowSel</code> 的值，你可以获取当前选中行的索引值，进而在需要的地方使用或处理该值。</p>
+</blockquote>
+<h1 id="DGList-TextMatrix-DGList-RowSel-0"><a href="#DGList-TextMatrix-DGList-RowSel-0" class="headerlink" title="DGList.TextMatrix(DGList.RowSel ,0)"></a>DGList.TextMatrix(DGList.RowSel ,0)</h1><blockquote>
+<blockquote>
+<p><code>DGList.TextMatrix(DGList.RowSel, 0)</code> 是一个在 VBScript 中用于获取数据网格控件（如 FlexGrid）中所选行（<code>RowSel</code>）的第一列（0 列）文本值的表达式。</p>
+</blockquote>
+<p>在该表达式中，<code>DGList</code> 表示数据网格控件的对象，<code>RowSel</code> 是该控件的属性，表示当前所选行的索引值。而数字 0 则代表第一列的索引（在 VBScript 中，数组索引从 0 开始）。</p>
+<p>通过此表达式，可以获取到所选行的第一列的文本值，并将其用于后续操作。</p>
+</blockquote>
+<h1 id="MsgBox-“您确认要删除-”-PName-“-该零件信息吗？”-292-x3D-6"><a href="#MsgBox-“您确认要删除-”-PName-“-该零件信息吗？”-292-x3D-6" class="headerlink" title="MsgBox(“您确认要删除[” + PName + “]该零件信息吗？”,292) &#x3D; 6"></a>MsgBox(“您确认要删除[” + PName + “]该零件信息吗？”,292) &#x3D; 6</h1><blockquote>
+<blockquote>
+<p><code>MsgBox(&quot;您确认要删除[&quot; + PName + &quot;]该零件信息吗？&quot;, 292) = 6</code> 是一个用于显示带有确认按钮的消息框，并根据用户的选择返回一个值的代码。</p>
+</blockquote>
+<p>在该代码中，<code>MsgBox</code> 是用于显示消息框的函数，括号中的第一个参数是要显示的消息文本，第二个参数 292 表示消息框类型为具有确认和取消按钮的消息框。</p>
+<p>根据返回值进行处理，数字 6 表示用户点击了确认按钮。因此，代码的意思是，如果用户点击了确认按钮，返回值为 6，则执行相应的删除操作。</p>
+<p>同时，代码中还使用了字符串拼接，将变量 <code>PName</code> 的值嵌入到消息文本中。</p>
+</blockquote>
+<h1 id="DGList-ColAlignment-x3D-1"><a href="#DGList-ColAlignment-x3D-1" class="headerlink" title="DGList.ColAlignment &#x3D; 1"></a>DGList.ColAlignment &#x3D; 1</h1><blockquote>
+<blockquote>
+<p><code>DGList.ColAlignment = 1</code> 是一个用于设置数据网格控件（如 FlexGrid）中所有列的对齐方式的代码。</p>
+</blockquote>
+<p>在该代码中，<code>DGList</code> 表示数据网格控件的对象，<code>ColAlignment</code> 是该控件的属性，用于设置列的对齐方式。</p>
+<p>数字 1 代表对齐方式为居中对齐。根据代码的设定，执行该语句后，数据网格中的所有列的内容将居中对齐显示。</p>
+</blockquote>
+<h1 id="CInt-函数"><a href="#CInt-函数" class="headerlink" title="CInt  函数"></a>CInt  函数</h1><blockquote>
+<p><code>CInt</code> 是一个函数，用于将给定的表达式（expression）转换为整数类型（integer）。</p>
+<p><code>CInt(expression)</code> 中的 <code>expression</code> 可以是任何合法的表达式，包括数字、字符串或变量。该函数会尝试将 <code>expression</code> 转换为整数类型，并返回转换后的整数值。如果无法进行有效的转换，将引发错误。</p>
+<p>下面是一些示例使用 <code>CInt</code> 函数的情况：</p>
+</blockquote>
+<pre class=" language-vbscript"><code class="language-vbscript">Dim num As Integer
+num = CInt(10.5) ' 将浮点数 10.5 转换为整数 10
+
+Dim str As String
+str = "123"
+num = CInt(str) ' 将字符串 "123" 转换为整数 123
+
+Dim invalid As String
+invalid = "ABC"
+num = CInt(invalid) ' 无法将字符串 "ABC" 转换为整数，将引发错误
+</code></pre>
+<blockquote>
+<p>需要注意的是，在进行类型转换时，<code>CInt</code> 函数会对表达式进行取整操作，即舍去小数部分。</p>
+</blockquote>
+<h1 id="VBScript-符号"><a href="#VBScript-符号" class="headerlink" title="VBScript 符号"></a>VBScript 符号</h1><pre class=" language-vbscript"><code class="language-vbscript">vbCrlf 表示换行符和回车符的组合。
+Chr(10) 和 Chr(13) 是特殊字符，分别表示换行符和回车符。
+</code></pre>
+<h1 id="Wincc—VBScript-变量读写【异步-x2F-同步】"><a href="#Wincc—VBScript-变量读写【异步-x2F-同步】" class="headerlink" title="Wincc—VBScript 变量读写【异步&#x2F;同步】"></a>Wincc—VBScript 变量读写【异步&#x2F;同步】</h1><blockquote>
+<p>异步读: <code>read()</code></p>
+<blockquote>
+<p>理解：相当于有“缓存区” <code>【映像区】</code>  读取变量时，第一次读取数据先读取AS系统中的数据，后面映像区<code>周期性（触发周期/2）</code>的从AS系统请求数据。在次读取数据时，直接从“缓存区”中读取变量。</p>
+</blockquote>
+<p>同步读: <code>read(1)</code></p>
+<p>理解：直接从AS系统中读取数据。</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>公告</category>
+        <category>日记</category>
+        <category>非标准自动化测试日记</category>
       </categories>
       <tags>
-        <tag>公告</tag>
+        <tag>日记</tag>
+        <tag>非标准自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>非标准自动化测试工作日记----Day 4</title>
+    <url>/2023/08/10/day4/</url>
+    <content><![CDATA[<p><u><strong>-Day 4</strong></u><br><u><strong>author:  xizhao</strong></u></p>
+<h2 id="VBScript：Set关键字"><a href="#VBScript：Set关键字" class="headerlink" title="VBScript：Set关键字"></a>VBScript：Set关键字</h2><blockquote>
+<p>在 VBScript 中，如果你希望在函数中返回一个对象引用或一个对象变量，你需要使用 <code>Set</code> 关键字。</p>
+<p>如果你想返回的是一个原始类型的值（例如字符串、数值、布尔值等），则不需要使用 <code>Set</code> 关键字。</p>
+<p>以下是一些示例，说明何时需要使用 <code>Set</code> 关键字：</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>返回一个对象引用：</li>
+</ol>
+</blockquote>
+<pre class=" language-vbscript"><code class="language-vbscript">Function GetObjectReference()
+    Dim obj
+    Set obj = CreateObject("SomeObject")
+    Set GetObjectReference = obj  ' 返回一个对象引用时需要使用 Set
+End Function
+</code></pre>
+<blockquote>
+<ol start="2">
+<li>返回原始类型的值：</li>
+</ol>
+</blockquote>
+<pre class=" language-vbscript"><code class="language-vbscript">Function GetPrimitiveValue()
+    GetPrimitiveValue = "Hello, World!"  ' 返回一个字符串字面量，不需要使用 Set
+End Function
+</code></pre>
+<blockquote>
+<p>在函数中使用 <code>Set</code> 关键字可以确保对象引用被正确地分配和返回。</p>
+<blockquote>
+<p>需要注意的是，在 VBScript 中，函数可以返回对象引用或原始类型的值，但不支持返回数组。如果要返回多个值，可以使用 <code>ByRef</code> 参数来传递引用，或者将多个值封装到一个对象中进行返回。</p>
+</blockquote>
+</blockquote>
+<h2 id="Set-GetADOConnData-x3D-conn-Set-Conn-x3D-GetADOConnData"><a href="#Set-GetADOConnData-x3D-conn-Set-Conn-x3D-GetADOConnData" class="headerlink" title="Set GetADOConnData &#x3D; conn        Set Conn&#x3D;GetADOConnData()"></a>Set GetADOConnData &#x3D; conn        Set Conn&#x3D;GetADOConnData()</h2><blockquote>
+<blockquote>
+<p>Set GetADOConnData &#x3D; conn  </p>
+</blockquote>
+<p>将连接对象<code>conn</code>返回给<code>函数调用者</code>，通过<code>Set GetADOConnData = conn</code>。就好像是，有返回值的函数。可以理解为JAVA中的有返回值的函数和无返回值的函数的区别。</p>
+<p>加了这段代码，在VBScript中就是有返回值的函数。</p>
+<blockquote>
+<p>Set Conn&#x3D;GetADOConnData()</p>
+</blockquote>
+<p>将 <code>GetADOConnData()</code> 函数返回的<code>对象</code>赋值给变量 <code>Conn</code>。</p>
+</blockquote>
+<h2 id="VBScript中的函数返回："><a href="#VBScript中的函数返回：" class="headerlink" title="VBScript中的函数返回："></a>VBScript中的函数返回：</h2><pre class=" language-vbscript"><code class="language-vbscript">function GetADOConnData（）
+
+。。。
+
+Set GetADOConnData = conn          `这里相当于，java中的return conn;
+
+。。。
+
+end function
+
+
+
+function GetValueFromDB（）
+
+。。。
+
+Set Conn=GetADOConnData()       `这里就是在调用GetADOConnData() 并将该函数的返回值，赋予Conn对象；
+
+。。。
+
+end function
+</code></pre>
+<h2 id="执行一次SQL语句，并返回受影响的行"><a href="#执行一次SQL语句，并返回受影响的行" class="headerlink" title="执行一次SQL语句，并返回受影响的行"></a>执行一次SQL语句，并返回受影响的行</h2><blockquote>
+<p>代码：</p>
+</blockquote>
+<pre class=" language-vbscript"><code class="language-vbscript">'执行一次SQL语句,并返回影响的行
+Function ReturnExecuteSQL(Byval SQL) 
+    On Error Resume Next 
+   
+    Dim Conn,RowCount
+    RowCount = -1
+    Set Conn = GetADOConn()
+    Conn.Open
+    Conn.Execute SQL,RowCount,&H0001
+    Conn.Close: Set Conn = Nothing
+    
+    If Err.Number <> 0 Then
+        Err.Claer
+    End If 
+    ReturnExecuteSQL = RowCount
+End Function
+</code></pre>
+<blockquote>
+<p>主要语句解析：</p>
+</blockquote>
+<blockquote>
+<p><code>Conn.Execute SQL, RowCount, &amp;H0001</code> 是用于执行 SQL 查询的语句。让我们详细解释一下每个参数的含义：</p>
+<ul>
+<li><code>Conn</code>：表示要执行查询的数据库连接对象。</li>
+<li><code>SQL</code>：包含要执行的 SQL 查询的字符串。</li>
+<li><code>RowCount</code>：用于返回执行查询后影响的行数。在该代码中，<code>RowCount</code> 是一个变量，将被传递给 <code>Execute</code> 方法以返回查询结果。</li>
+<li><code>&amp;H0001</code>：这是一个常量，用于指定游标类型。在代码中，<code>&amp;H0001</code> 对应键控游标（adOpenKeyset）。</li>
+</ul>
+<p>综上所述，该行代码的作用是使用给定的连接对象 <code>Conn</code> 执行 SQL 查询，并将执行结果中的影响行数存储到 <code>RowCount</code> 变量中。查询的结果不会被返回，只是用于获取影响行数。</p>
+<blockquote>
+<p>需要注意的是，常量值 <code>&amp;H0001</code> 指定了键控游标，这意味着查询的结果集是可滚动的，并且通过关键字段索引。如果你需要其他类型的游标，可以选择适合你需求的常量值。</p>
+</blockquote>
+<p><code>ReturnExecuteSQL = RowCount</code> 是将影响的行数作为函数的返回值。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>日记</category>
+        <category>非标准自动化测试日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+        <tag>非标准自动化测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1070,6 +1058,18 @@ Any content (support inline tags too).
       <tags>
         <tag>Typora</tag>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/08/03/xizhao/</url>
+    <content><![CDATA[<h1 id="你好，欢迎来到-xizhao’s-blog。"><a href="#你好，欢迎来到-xizhao’s-blog。" class="headerlink" title="你好，欢迎来到 xizhao’s blog。"></a>你好，欢迎来到 xizhao’s blog。</h1><p><img src="/images/2.jpg"></p>
+]]></content>
+      <categories>
+        <category>公告</category>
+      </categories>
+      <tags>
+        <tag>公告</tag>
       </tags>
   </entry>
 </search>
